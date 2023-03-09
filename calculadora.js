@@ -6,12 +6,9 @@ function somar() {
   /* use as constantes numero 1 e numero 2 e realize a soma entre elas.
   Em seguida, ao invés de mostrar o numero 10, mostre o resultado da operação */
   
+  const resultado = numero1 + numero2;
+  document.getElementById("resultadoSoma").innerHTML = resultado;
   
-  
-  
-  
-  
-  document.getElementById("resultadoSoma").innerHTML = 10;
 }
 
 function subtrair() {
@@ -22,12 +19,9 @@ function subtrair() {
   /* use as constantes numero 1 e numero 2 e realize a soma entre elas.
    Em seguida, ao invés de mostrar o numero 9, mostre o resultado da operação */
   
-  
-  
-  
-  
-  
-  document.getElementById("resultadoSub").innerHTML = 9;
+ const resultado = numero1 - numero2;
+  document.getElementById("resultadoSub").innerHTML = resultado;
+
 }
 
 function multiplicar() {
@@ -38,10 +32,9 @@ function multiplicar() {
   /* use as constantes numero 1 e numero 2 e realize a soma entre elas.
    Em seguida, ao invés de mostrar o numero 5, mostre o resultado da operação */
   
-  
-  
-  
-  document.getElementById("resultadoMult").innerHTML = 5;
+  const resultado = numero1 * numero2;
+  document.getElementById("resultadoMult").innerHTML = resultado;
+
 }
 
 function dividir() {
@@ -52,9 +45,9 @@ function dividir() {
   /* use as constantes numero 1 e numero 2 e realize a soma entre elas.
    Em seguida, ao invés de mostrar o numero -89, mostre o resultado da operação */
   
-  
-  
-  
-  
-  document.getElementById("resultadoDiv").innerHTML = -89;
-}
+  if (numero2 === 0) {
+    document.getElementById("resultadoDiv").innerHTML = "Erro: divisão por zero";
+  } else {
+    const resultado = numero1 / numero2;
+    document.getElementById("resultadoDiv").innerHTML = resultado;
+  }
