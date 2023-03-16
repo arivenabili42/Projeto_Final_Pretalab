@@ -22,8 +22,10 @@ function calcularMedia() {
   // evite mexer no código acima!
   
   const media = (nota1 + nota2 + nota3 + nota4) / 4; 
-  if (media == 0) {
-    mensagem = "Infelizmente você zerou a prova :(";
+  if (media > 10 || media < 0) {
+    mensagem = `Por favor, digite um número válido (entre 0 e 10)`;
+  } else if (media == 0) {
+    mensagem = `Infelizmente você zerou a prova :(`;
   } else if (media >= 0.1 && media <= 3) {
     mensagem = `Caramba, deu ruim, você obteve média ${media.toFixed(1)}! Estude mais e tente novamente!`;
   } else if (media >= 3.1 && media <= 5.9) {
@@ -33,7 +35,7 @@ function calcularMedia() {
   } else if (media >= 7.1 && media <= 9.9) {
     mensagem = `Notão! Sua média é ${media.toFixed(1)}!`;
   } else if (media == 10) {
-    mensagem = "Hoje é seu aniversário? Pq você tá de parabéns! 10 de média";
+    mensagem = `Hoje é seu aniversário? Pq você tá de parabéns! 10 de média`;
   } 
   
   
